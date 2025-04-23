@@ -2,93 +2,72 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <style>
-      nav a {
-        color: #5c4a2c;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: 600;
-        font-size: 16px;
-        transition: color 0.3s ease;
-      }
-
-      nav a:hover {
-        color: #8b7355;
-      }
-    </style>
-
     <meta charset="UTF-8">
     <title>EVOLVE Coaching</title>
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            z-index: 1000;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-        main {
-            padding-top: 120px;
-            font-family: 'Arial', sans-serif;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfbf7;
             color: #333;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
         }
-        header img {
-            height: 48px;
-            object-fit: contain;
+
+        h1 {
+            text-align: center;
+            color: #5c4a2c;
         }
-        section {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
+
+        .section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            padding: 30px;
+            margin-top: 30px;
         }
-        a.button {
+
+        .button {
+            display: inline-block;
             background-color: #556b2f;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 24px;
             font-size: 16px;
             border-radius: 6px;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
+            font-weight: 600;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
         }
-        .testimonial {
-            background-color: #f7f2e7;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+
+        .button:hover {
+            background-color: #6b7d3f;
         }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #e9e4d9;
-            font-size: 14px;
+
+        ul {
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="images/brandmark-design-5.png" alt="EVOLVE Logo">
-        <nav style="margin-top: 10px;">
-            <a href="index.html">Početna</a> |
-            <a href="about.html">O meni</a> |
-            <a href="coaching.html">Coaching</a> |
-            <a href="blog.html">Blog</a> |
-            <a href="contact.html">Kontakt</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-<h2>EVOLVE Coaching</h2><p>Individualiziran plan treninga, analiza pokreta, edukacija o biomehanici, prehrana prilagođena cilju i tjedna podrška.</p><div style='text-align:center;'><a class='button' href='https://airtable.com/app3DC9xsS3eOHcdc/shrvUhQm8bSFgxwE0' target='_blank'>Ostavi svoju recenziju</a></div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Jakov Basic</p>
-    </footer>
+    <h1>EVOLVE Coaching</h1>
+
+    <div class="section">
+        <p>EVOLVE je individualizirani coaching program dizajniran za muškarce koji žele postići vrhunsku formu, riješiti bolove i trenirati smisleno. Ne kopiram planove – gradim ih oko tebe.</p>
+        <ul>
+            <li>Detaljna analiza pokreta i navika</li>
+            <li>Plan treninga prilagođen tvojoj biomehanici</li>
+            <li>Online podrška i feedback svaki dan</li>
+            <li>Check-in pozivi i korekcije vježbi</li>
+            <li>Prehrambeni plan i savjeti za navike</li>
+            <li>Uključen eBook o snu i regeneraciji</li>
+        </ul>
+        <p>Cijena: <strong>150€ mjesečno</strong> (minimalno trajanje 3 mjeseca)</p>
+
+        <div style="text-align: center;">
+            <a class="button" href="live-training.html">EVOLVE treninzi uživo</a>
+        </div>
+    </div>
 </body>
 </html>
