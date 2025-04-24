@@ -2,93 +2,121 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <style>
-      nav a {
-        color: #5c4a2c;
-        text-decoration: none;
-        margin: 0 10px;
-        font-weight: 600;
-        font-size: 16px;
-        transition: color 0.3s ease;
-      }
-
-      nav a:hover {
-        color: #8b7355;
-      }
-    </style>
-
     <meta charset="UTF-8">
-    <title>EVOLVE Coaching</title>
+    <title>Kontaktiraj me - EVOLVE</title>
     <link rel="stylesheet" href="./css/style.css">
     <style>
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            z-index: 1000;
-            padding: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-        main {
-            padding-top: 120px;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-        }
-        header img {
-            height: 48px;
-            object-fit: contain;
-        }
-        section {
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f5f0;
+            color: #2e2e2e;
+            line-height: 1.8;
+            padding: 40px 20px;
             max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
+            margin: 0 auto;
         }
-        a.button {
-            background-color: #556b2f;
-            color: white;
-            padding: 15px 30px;
-            font-size: 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .testimonial {
-            background-color: #f7f2e7;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        footer {
+
+        header {
             text-align: center;
-            padding: 20px;
-            background-color: #e9e4d9;
-            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        .section {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            padding: 40px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4a3b26;
+            font-weight: 700;
+        }
+
+        label {
+            display: block;
+            margin: 16px 0 6px;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        button {
+            background-color: #5c4a2c;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #8b7355;
+        }
+
+        .alt-contact {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .alt-contact p {
+            margin-bottom: 6px;
+        }
+
+        .alt-contact a {
+            color: #5c4a2c;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="images/brandmark-design-5.png" alt="EVOLVE Logo">
-        <nav style="margin-top: 10px;">
-            <a href="index.html">Početna</a> |
-            <a href="about.html">O meni</a> |
-            <a href="coaching.html">Coaching</a> |
-            <a href="blog.html">Blog</a> |
-            <a href="contact.html">Kontakt</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-<h2>Kontakt</h2><p>Javi mi se putem Instagrama @jakov_basic ili putem kontakt forme uskoro.</p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Jakov Basic</p>
-    </footer>
+
+<header>
+    <a href="index.html">
+        <img src="./images/brandmark-design-2.png" alt="EVOLVE Logo">
+    </a>
+</header>
+
+<div class="section">
+    <h1>Kontaktiraj me</h1>
+    <form action="https://formsubmit.co/jakovbasicfit@gmail.com" method="POST">
+        <label for="name">Ime i prezime</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail adresa</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Poruka</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Pošalji poruku</button>
+    </form>
+
+    <div class="alt-contact">
+        <p>Ili me kontaktiraj direktno:</p>
+        <a href="https://www.instagram.com/jakov_basic" target="_blank">@jakov_basic</a><br>
+        <a href="mailto:jakovbasicfit@gmail.com">jakovbasicfit@gmail.com</a>
+    </div>
+</div>
+
 </body>
 </html>
