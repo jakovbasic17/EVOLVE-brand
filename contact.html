@@ -2,120 +2,35 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <meta charset="UTF-8">
-    <title>Kontaktiraj me - EVOLVE</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f5f0;
-            color: #2e2e2e;
-            line-height: 1.8;
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        header img {
-            height: 60px;
-        }
-
-        .section {
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-            padding: 40px;
-            margin-top: 40px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #4a3b26;
-            font-weight: 700;
-        }
-
-        label {
-            display: block;
-            margin: 16px 0 6px;
-            font-weight: 600;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-            margin-bottom: 10px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        button {
-            background-color: #5c4a2c;
-            color: white;
-            border: none;
-            padding: 14px 24px;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-weight: 600;
-        }
-
-        button:hover {
-            background-color: #8b7355;
-        }
-
-        .alt-contact {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .alt-contact p {
-            margin-bottom: 6px;
-        }
-
-        .alt-contact a {
-            color: #5c4a2c;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 18px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Kontakt | EVOLVE Coaching</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    body {background-color: #0f0f0f; color: #ffffff; font-family: 'Poppins', sans-serif; margin: 0; padding: 0;}
+    header {position: absolute; top: 20px; left: 20px;}
+    header img {height: 50px;}
+    .section {padding: 120px 20px 60px; max-width: 800px; margin: auto; text-align: center;}
+    h1 {font-size: 2.8rem; margin-bottom: 1rem;}
+    form {display: flex; flex-direction: column; gap: 12px;}
+    input, textarea {padding: 10px; border-radius: 8px; border: none; font-size: 1rem;}
+    button {padding: 12px; background-color: #a79c8e; color: #0f0f0f; border: none; border-radius: 8px; font-weight: 600;}
+    button:hover {background-color: #d0c4b0;}
+</style>
 </head>
 <body>
 
 <header>
-    <a href="index.html">
-        <img src="./images/brandmark-design-2.png" alt="EVOLVE Logo">
-    </a>
+<a href="index.html"><img src="images/brandmark-design-2.png" alt="EVOLVE Logo"></a>
 </header>
 
 <div class="section">
-    <h1>Kontaktiraj me</h1>
-    <form action="https://formsubmit.co/evolve.coaching.hr@gmail.com" method="POST">
-        <label for="name">Ime i prezime</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">E-mail adresa</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Poruka</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Pošalji poruku</button>
-    </form>
-
-    <div class="alt-contact">
-        <p>Ili me kontaktiraj direktno:</p>
-        <a href="https://www.instagram.com/jakov_basic" target="_blank">@jakov_basic</a><br>
-        <a href="mailto:evolve.coaching.hr@gmail.com">evolve.coaching.hr@gmail.com</a>
-    </div>
+<h1>Kontaktiraj me</h1>
+<form action="https://formsubmit.co/evolve.coaching.hr@gmail.com" method="POST">
+<input type="text" name="Ime" placeholder="Tvoje ime" required>
+<input type="email" name="Email" placeholder="Tvoj email" required>
+<textarea name="Poruka" placeholder="Tvoja poruka" rows="5" required></textarea>
+<button type="submit">Pošalji</button>
+</form>
 </div>
 
 </body>

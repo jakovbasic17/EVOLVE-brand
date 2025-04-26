@@ -2,167 +2,40 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-    <meta charset="UTF-8">
-    <title>EVOLVE Coaching</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0f0f0f;
-            color: #fff;
-            scroll-behavior: smooth;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        header {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 3;
-        }
-
-        header img {
-            height: 50px;
-        }
-
-        .hero-container {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 1;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-            filter: brightness(0.6);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 0 20px;
-        }
-
-        .hero-content h1 {
-            font-size: 3.2rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #e0e0e0;
-        }
-
-        .hero-content a {
-            background-color: #a79c8e;
-            color: #1a1a1a;
-            padding: 12px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .hero-content a:hover {
-            background-color: #d0c4b0;
-        }
-
-        section {
-            padding: 80px 20px;
-            max-width: 960px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        section p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #ccc;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Start Your Evolution | EVOLVE Coaching</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body, html {font-family: 'Poppins', sans-serif; background-color: #0f0f0f; color: #ffffff;}
+    header {position: absolute; top: 20px; left: 20px;}
+    header img {height: 50px;}
+    .hero-container {position: relative; height: 100vh; overflow: hidden;}
+    video {position: absolute; top: 50%; left: 50%; min-width: 100%; min-height: 100%; width: auto; height: auto; transform: translate(-50%, -50%); object-fit: cover; filter: brightness(0.6);}
+    .hero-content {position: relative; z-index: 2; text-align: center; top: 50%; transform: translateY(-50%); padding: 0 20px;}
+    .hero-content h1 {font-size: 3.2rem; margin-bottom: 1rem;}
+    .hero-content p {font-size: 1.2rem; margin-bottom: 2rem; color: #cccccc;}
+    .hero-content a {background-color: #a79c8e; color: #0f0f0f; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: 600;}
+    .hero-content a:hover {background-color: #d0c4b0;}
+</style>
 </head>
 <body>
 
 <header>
-    <a href="index.html">
-        <img src="./images/brandmark-design-2.png" alt="EVOLVE Logo">
-    </a>
+<a href="index.html"><img src="images/brandmark-design-2.png" alt="EVOLVE Logo"></a>
 </header>
 
 <div class="hero-container">
-    <video autoplay muted loop>
-        <source src="./videos/hero-video.mp4" type="video/mp4">
-        Tvoj preglednik ne podržava video tag.
-    </video>
-
-    <div class="hero-content">
-        <h1>Start your evolution</h1>
-        <p>Struktura, progresija i prilagodba — bez prečaca.</p>
-        <a href="coaching.html">Let's evolve</a>
-    </div>
+<video autoplay muted loop>
+<source src="videos/hero-video.mp4" type="video/mp4">
+Tvoj preglednik ne podržava video tag.
+</video>
+<div class="hero-content">
+<h1>Start your evolution</h1>
+<p>Struktura, progresija i prilagodba — bez prečaca.</p>
+<a href="coaching.html">Let's evolve</a>
 </div>
-
-<section id="about">
-    <h2>O EVOLVE pristupu</h2>
-    <p>
-        Ne kopiram planove — gradim ih oko tebe.
-        EVOLVE coaching temelji se na biomehaničkoj analizi, kvaliteti pokreta i konstantnoj prilagodbi.
-        Pristupam svakom klijentu s istom pažnjom kao da treniram sebe.
-    </p>
-</section>
-
-<section id="recenzije">
-    <h2>Iskustva klijenata</h2>
-    <p>
-        “Prvi put osjećam da moj program ima smisla.”<br>
-        “Svaki detalj je objašnjen, svaki pokret ima razlog.”<br>
-        “Više ne treniram na sreću, nego s razumijevanjem.”
-    </p>
-</section>
-
-<section id="kontakt">
-    <h2>Spreman za suradnju?</h2>
-    <p>Javi se direktno putem Instagrama ili e-maila:</p>
-    <p><a href="https://www.instagram.com/jakov_basic" target="_blank">@jakov_basic</a><br>
-    <a href="mailto:evolve.coaching.hr@gmail.com">evolve.coaching.hr@gmail.com</a></p>
-</section>
-
-<footer>
-    © 2025 EVOLVE Coaching — Sva prava pridržana.
-</footer>
+</div>
 
 </body>
 </html>
