@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 80px 20px 80px;
+    padding: 40px 60px;
   }
   
   .logo {
@@ -19,7 +19,7 @@ body {
   .menu-toggle {
     display: none;
     font-size: 2.5rem;
-    color: #a79c8e;
+    color: #ffffff;
     cursor: pointer;
   }
   
@@ -29,14 +29,14 @@ body {
   }
   
   .nav-links a {
-    color: #a79c8e;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.2rem;
   }
   
   .nav-links a:hover {
-    color: #c0b7aa;
+    color: #cccccc;
   }
   
   .hero {
@@ -65,11 +65,12 @@ body {
   .hero-content {
     position: absolute;
     top: 50%;
-    left: 10%;
+    left: 0;
     transform: translateY(-50%);
     text-align: left;
+    padding: 0 40px;
     z-index: 2;
-    max-width: 800px;
+    max-width: 600px;
   }
   
   .hero-content h1 {
@@ -82,7 +83,7 @@ body {
     font-size: 1.4rem;
     color: #cccccc;
     line-height: 1.8;
-    max-width: 600px;
+    max-width: 500px;
   }
   
   .button {
@@ -131,9 +132,11 @@ body {
       justify-content: space-between;
       padding: 20px 30px;
     }
+  
     .menu-toggle {
       display: block;
     }
+  
     .nav-links {
       display: none;
       flex-direction: column;
@@ -145,18 +148,27 @@ body {
       padding: 20px;
       border-radius: 10px;
     }
+  
     .nav-links.active {
       display: flex;
     }
-    .hero-content {
-      left: 5%;
-      right: 5%;
-      text-align: left;
-      padding: 0 20px;
+  
+    .nav-links a {
+      margin: 10px 0;
+      font-size: 1.5rem;
     }
+  
+    .hero-content {
+      padding: 0 30px;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+    }
+  
     .hero-content h1 {
       font-size: 2.5rem;
     }
+  
     .hero-content p {
       font-size: 1.1rem;
     }
