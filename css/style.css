@@ -7,10 +7,8 @@
 
 body {
     background-color: #0f0f0f;
-    color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    color: #ffffff;
 }
 
 /* Header */
@@ -26,16 +24,15 @@ body {
     width: 150px;
 }
 
-/* Navigacija */
 .nav {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav a {
     color: #a79c8e;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -44,42 +41,112 @@ body {
     color: #ffffff;
 }
 
-/* Main sadržaj */
-.main-section {
-    max-width: 90%;
-    margin: 60px auto 0 auto;
-    text-align: center;
+/* Hero sekcija */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.main-section h1 {
-    font-size: 32px;
-    margin-bottom: 30px;
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
-.main-section p {
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
     margin-bottom: 20px;
+    text-align: left;
+}
+
+.hero-text p {
+    font-size: 20px;
     color: #cccccc;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.button {
+    display: inline-block;
+    background-color: #a79c8e;
+    color: #0f0f0f;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 40px 0;
+}
+
+.footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #a79c8e;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #ffffff;
 }
 
 /* Responsive za mobitel */
 @media (max-width: 768px) {
     .nav {
         flex-direction: column;
-        align-items: center;
         gap: 15px;
     }
 
-    .main-section {
+    .hero-text {
+        top: 50%;
+        left: 5%;
+        right: 5%;
         max-width: 90%;
-        padding: 0 20px;
-        text-align: center;
+        transform: translateY(-50%);
     }
 
-    .main-section h1 {
-        font-size: 28px;
+    .hero-text h1 {
+        font-size: 32px;
     }
 
-    .main-section p {
-        font-size: 15px;
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 10px 24px;
     }
 }
