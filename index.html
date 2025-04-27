@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="hr">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,10 @@
 
 <header class="header">
   <img src="images/brandmark-design-5.png" alt="Evolve Logo" class="logo">
-  <nav>
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+  <nav id="nav-links" class="nav-links">
     <a href="about.html">O meni</a>
     <a href="coaching.html">Coaching</a>
     <a href="blog.html">Blog</a>
@@ -34,6 +37,15 @@
   <img src="images/brandmark-design-5.png" alt="Evolve Logo">
   <p>© 2025 Jakov Bašić | <a href="https://www.instagram.com/jakov_basic/" target="_blank">Instagram</a></p>
 </footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
