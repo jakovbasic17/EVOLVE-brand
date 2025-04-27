@@ -1,175 +1,78 @@
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    padding: 0;
     background-color: #0f0f0f;
+    font-family: 'Poppins', sans-serif;
     color: #ffffff;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 60px;
-  }
-  
-  .logo {
-    height: 60px;
-  }
-  
-  .menu-toggle {
-    display: none;
-    font-size: 2.5rem;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 40px;
-  }
-  
-  .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
-  
-  .nav-links a:hover {
-    color: #cccccc;
-  }
-  
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    text-align: left;
-    padding: 0 40px;
-    z-index: 2;
-    max-width: 600px;
-  }
-  
-  .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    color: #ffffff;
-  }
-  
-  .hero-content p {
-    font-size: 1.4rem;
-    color: #cccccc;
-    line-height: 1.8;
-    max-width: 500px;
-  }
-  
-  .button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 36px;
-    background-color: #a79c8e;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #c0b7aa;
-  }
-  
-  footer {
+}
+
+header {
     text-align: center;
-    padding: 60px 20px;
-    font-size: 14px;
-    color: #cccccc;
-  }
-  
-  footer img {
-    height: 40px;
-    margin-bottom: 20px;
-  }
-  
-  footer a {
+    padding: 20px 0 10px 0;
+}
+
+header img {
+    max-width: 180px;
+    margin-bottom: 30px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    margin: 0 15px;
     color: #a79c8e;
     text-decoration: none;
-    font-weight: 600;
-  }
-  
-  footer a:hover {
-    color: #c0b7aa;
-  }
-  
-  /* Responsive za mobitele */
-  @media (max-width: 768px) {
-    .header {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 20px 30px;
-    }
-  
-    .menu-toggle {
-      display: block;
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      gap: 20px;
-      background: #0f0f0f;
-      position: absolute;
-      top: 80px;
-      right: 30px;
-      padding: 20px;
-      border-radius: 10px;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .nav-links a {
-      margin: 10px 0;
-      font-size: 1.5rem;
-    }
-  
-    .hero-content {
-      padding: 0 30px;
-      left: 0;
-      right: 0;
-      max-width: 100%;
-    }
-  
-    .hero-content h1 {
-      font-size: 2.5rem;
-    }
-  
-    .hero-content p {
-      font-size: 1.1rem;
-    }
-  }
+    font-size: 18px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+main {
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #a79c8e;
+    color: #0f0f0f;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #0f0f0f;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 40px 0;
+}
+
+footer img {
+    max-width: 150px;
+}
