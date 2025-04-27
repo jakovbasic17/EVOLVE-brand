@@ -3,38 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O meni | EVOLVE</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>EVOLVE Coaching</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 24px;
+      color: #a79c8e;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #a79c8e;
+      font-size: 16px;
+      font-weight: 400;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      padding: 20px;
+      text-align: left;
+      top: 30%;
+      margin-left: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #cccccc;
+    }
+
+    .hero-text a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #a79c8e;
+      color: #a79c8e;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .hero-text a:hover {
+      background-color: #a79c8e;
+      color: #0f0f0f;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-text {
+        top: 20%;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      .hero-text h1 {
+        font-size: 28px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
 <header>
-  <img src="images/brandmark-design-5.png" alt="Evolve Logo" class="logo">
+  <div class="logo">EVOLVE</div>
   <nav>
-    <a href="about.html">O meni</a>
-    <a href="coaching.html">Coaching</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Kontakt</a>
+    <a href="#o-meni">O meni</a>
+    <a href="#coaching">Coaching</a>
+    <a href="#blog">Blog</a>
+    <a href="#kontakt">Kontakt</a>
   </nav>
 </header>
 
 <section class="hero">
-  <video autoplay muted loop playsinline class="background-video">
-    <source src="videos/tvoj-video.mp4" type="video/mp4">
-    Tvoj preglednik ne podržava video tag.
+  <video autoplay muted loop playsinline>
+    <source src="videos/your-video.mp4" type="video/mp4">
+    Tvoj preglednik ne podržava video.
   </video>
+
   <div class="hero-text">
-    <h1>O meni</h1>
-    <p>Ne gradim generičke planove. Gradim rješenja koja evoluiraju s tobom.</p>
-    <p>Zovem se Jakov Bašić. Cijeli život posvetio sam kretanju — a posljednje četiri godine duboko istražujem biomehaniku, snagu i pravu održivost tijela.</p>
-    <p>Moj pristup nije za svakoga. Radim s ozbiljnim rekreativcima i pojedincima koji razumiju da vrhunski rezultati ne dolaze slučajno, nego iz precizne gradnje temelja.</p>
-    <p>Ako želiš evoluciju, a ne iluziju napretka — na pravom si mjestu.</p>
+    <h1>Start your evolution</h1>
+    <p>Struktura, progresija i prilagodba &mdash; bez prečaca.</p>
+    <a href="#coaching">Let's evolve</a>
   </div>
 </section>
-
-<footer>
-  <p>© 2025 Jakov Bašić | <a href="https://instagram.com" target="_blank">Instagram</a></p>
-</footer>
 
 </body>
 </html>
