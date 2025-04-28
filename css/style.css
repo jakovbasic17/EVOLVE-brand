@@ -102,4 +102,27 @@
       flex-direction: column;
       gap: 10px;
     }
+  }.navigation a {
+    text-decoration: none;
+    color: #a79c8e;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .footer-content a {
+    color: #a79c8e;
+    text-decoration: none;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 10px 0; /* više razmaka gore ispod loga */
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px; /* dodatni razmak između loga i linkova */
   }
