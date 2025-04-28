@@ -126,4 +126,45 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-  }
+  }.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #a79c8e;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ffffff;
+}
+
+/* RESPONSIVE MOBITEL */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
