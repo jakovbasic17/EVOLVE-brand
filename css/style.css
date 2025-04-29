@@ -18,21 +18,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 0 10px 0;
-    background-color: transparent;
-    position: relative;
+    margin-top: 20px;
     z-index: 10;
+    position: relative;
   }
   
   .logo {
-    max-width: 120px;
+    max-width: 140px;
     margin-bottom: 10px;
   }
   
   .nav-links {
     display: flex;
     gap: 24px;
-    margin-top: 10px;
+    margin-top: 8px;
   }
   
   .nav-links a {
@@ -47,7 +46,7 @@
     color: #ffffff;
   }
   
-  /* Hero Section */
+  /* Hero */
   .hero {
     position: relative;
     width: 100%;
@@ -63,7 +62,7 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(0.5);
+    filter: brightness(0.6);
   }
   
   .hero-content {
@@ -74,8 +73,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
     max-width: 600px;
+    gap: 20px;
   }
   
   .hero-content h1 {
@@ -90,7 +89,7 @@
   
   .cta-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     margin-top: 10px;
     background-color: #a79c8e;
     color: #0f0f0f;
@@ -105,7 +104,28 @@
     color: #0f0f0f;
   }
   
-  /* Mobile Adjustments */
+  /* Footer */
+  .footer {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+    position: relative;
+    bottom: 0;
+  }
+  
+  .insta-link {
+    color: #a79c8e;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .insta-link:hover {
+    color: #ffffff;
+  }
+  
+  /* Responsive */
   @media (max-width: 768px) {
     .hero-content {
       left: 5%;
@@ -126,45 +146,4 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-  }.header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.logo img {
-    max-width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.nav a {
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    color: #a79c8e;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav a:hover {
-    color: #ffffff;
-}
-
-/* RESPONSIVE MOBITEL */
-@media (max-width: 768px) {
-    .nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-}
+  }
