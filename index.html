@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hr">
 <head>
@@ -8,17 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body, html { height: 100%; overflow-x: hidden; background: black; }
-
-    .video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -100;
-    }
+    body, html { background: black; overflow-x: hidden; }
 
     header {
       margin-top: 40px;
@@ -32,7 +21,6 @@
       width: 400px;
       height: auto;
       display: block;
-      z-index: 10;
     }
 
     .content {
@@ -40,8 +28,6 @@
       text-align: center;
       color: white;
       padding: 0 1rem 6rem;
-      position: relative;
-      z-index: 10;
     }
 
     .content h1 {
@@ -76,9 +62,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 3rem;
-      background-color: rgba(0, 0, 0, 0.7);
-      position: relative;
-      z-index: 10;
+      background-color: #0d0d0d;
     }
 
     .offer-card {
@@ -113,6 +97,51 @@
       filter: grayscale(100%);
     }
 
+    .contact-section {
+      background-color: #0d0d0d;
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-section form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 1rem;
+      border-radius: 8px;
+      border: none;
+      background: #1c1c1c;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .contact-section button {
+      background: white;
+      color: black;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-section button:hover {
+      background: #ccc;
+    }
+
     @media (max-width: 768px) {
       header img { width: 180px; }
       .content h1 { font-size: 2rem; }
@@ -129,10 +158,6 @@
   </style>
 </head>
 <body>
-  <video class="video-bg" autoplay muted loop playsinline>
-    <source src="IMG_3860.mp4" type="video/mp4">
-    Tvoj preglednik ne podržava video tag.
-  </video>
 
   <header>
     <img src="logo.png" alt="EVOLVE Logo">
@@ -158,5 +183,16 @@
       <p>Dolazi uskoro. Novi sustav individualnog coachinga.</p>
     </div>
   </section>
+
+  <section class="contact-section" id="kontakt">
+    <h2>Kontaktiraj me</h2>
+    <form action="mailto:evolve.coaching.hr@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="ime" placeholder="Tvoje ime" required />
+      <input type="email" name="email" placeholder="Tvoj email" required />
+      <textarea name="poruka" rows="5" placeholder="Tvoja poruka" required></textarea>
+      <button type="submit">Pošalji poruku</button>
+    </form>
+  </section>
+
 </body>
 </html>
