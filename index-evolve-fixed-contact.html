@@ -166,6 +166,9 @@
       font-size: 1rem;
     }
 
+    .contact-button { display: inline-block; margin-top: 2rem; padding: 1rem 2.5rem; font-size: 1.1rem; background: white; color: black; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background 0.3s ease; }
+    .contact-button:hover { background: #ccc; }
+
     .contact-section button {
       background: white;
       color: black;
@@ -236,12 +239,7 @@
 
   <section class="contact-section" id="kontakt">
     <h2>Kontaktiraj me</h2>
-    <form action="mailto:evolve.coaching.hr@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="ime" placeholder="Tvoje ime" required />
-      <input type="email" name="email" placeholder="Tvoj email" required />
-      <textarea name="poruka" rows="5" placeholder="Tvoja poruka" required></textarea>
-      <button type="submit">Pošalji poruku</button>
-    </form>
+    <a href="mailto:evolve.coaching.hr@gmail.com?subject=Upit sa stranice" class="contact-button">Pošalji poruku</a>
   </section>
 
 </body>
