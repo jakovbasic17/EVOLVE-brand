@@ -5,12 +5,110 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Start your evolution</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header img {
+      width: 300px;
+      margin-top: 2rem;
+    }
+    .section {
+      padding: 4rem 1rem;
+    }
+    .section.dark {
+      background-color: #111;
+    }
+    .offer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .card {
+      background: #1c1c1c;
+      border: 1px solid #2e2e2e;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 300px;
+    }
+    .card.unavailable {
+      opacity: 0.4;
+    }
+    .contact-button {
+      display: inline-block;
+      background: white;
+      color: black;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 800px;
+      border: none;
+      margin-top: 2rem;
+      border-radius: 12px;
+    }
+  </style>
 </head>
-<body style="background:black; color:white; font-family:sans-serif; text-align:center; padding:4rem;">
-  <img src="logo.png" alt="Logo" style="width:200px; margin-bottom:2rem;">
+<body>
+
+<header>
+  <img src="logo.png" alt="EVOLVE Logo" />
+</header>
+
+<section class="section">
   <h1>Start your evolution</h1>
-  <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb. Fokus na tehniku, snagu i tvoje ciljeve.</p>
-  <p style="margin-top:2rem;">Moje ime je <strong>Jakov Bašić</strong>, i tu sam da ti pomognem kroz pametan i individualiziran pristup treninzima.</p>
-  git add .
-  git commit -m "Clean deploy with fixed index.html"
-  git push origin main
+  <p>Struktura, progresija i prilagodba — bez prečaca.</p>
+</section>
+
+<section class="section dark">
+  <h2>Ponuda</h2>
+  <div class="offer">
+    <div class="card">
+      <h3>Live Coaching</h3>
+      <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb. Fokus na tehniku, snagu i tvoje ciljeve.</p>
+    </div>
+    <div class="card">
+      <h3>Hybrid Coaching</h3>
+      <p>Jedan trening uživo tjedno + online podrška i program. Kvaliteta uz fleksibilnost.</p>
+    </div>
+    <div class="card unavailable">
+      <h3>Online Coaching</h3>
+      <p>Dolazi uskoro. Novi sustav individualnog coachinga.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>O meni</h2>
+  <p>Moje ime je <strong>Jakov Bašić</strong>, i iza mene je više od 10 godina iskustva u sportu, pokretu i radu s tijelom.</p>
+  <p>Kroz godine treninga i rada s ljudima naučio sam da kvaliteta pokreta, razumijevanje tijela i dosljednost čine razliku.</p>
+  <p>EVOLVE je moj pristup — individualiziran, temeljen na prepoznavanju obrazaca kretanja koji mogu dovesti do nelagode, loših navika i dugoročnih problema.</p>
+</section>
+
+<section class="section dark">
+  <h2>Kontakt</h2>
+  <a href="mailto:evolve.coaching.hr@gmail.com?subject=Upit sa stranice" class="contact-button">Pošalji upit</a>
+</section>
+
+<section class="section">
+  <h2>Ostavi recenziju</h2>
+  <iframe src="https://airtable.com/embed/shrvUhQm8bSFgxwE0?backgroundColor=black"></iframe>
+</section>
+
+</body>
+</html>
+git add .
+git commit -m "Full verzija sa svim sekcijama"
+git push origin main
