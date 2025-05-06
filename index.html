@@ -1,239 +1,66 @@
 
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EVOLVE Coaching</title>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Staatliches&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Staatliches', sans-serif;
       margin: 0;
-      padding: 0;
-      overflow-x: hidden;
+      font-family: 'Urbanist', sans-serif;
+      background-color: black;
+      color: white;
+      text-align: center;
     }
     header {
-      background: #000;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #222;
+      padding: 20px;
     }
-    header img {
-      width: 160px;
+    .logo {
+      width: 180px;
+      margin: 0 auto;
+      display: block;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1.5rem;
-      font-size: 0.9rem;
-      font-family: 'Staatliches', sans-serif;
-      letter-spacing: 1px;
-    }
-    nav a:hover {
-      opacity: 0.6;
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      margin-top: 10px;
     }
     .section {
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-    .section.dark {
-      background-color: #111;
-    }
-    h1, h2, h3 {
-      font-family: 'Black Ops One', sans-serif;
-    }
-    .offer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .card {
-      background: #1c1c1c;
-      border: 1px solid #2e2e2e;
-      padding: 2rem;
-      border-radius: 12px;
-      width: 300px;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.03);
-    }
-    .card.unavailable {
-      opacity: 0.4;
-    }
-    .contact-button {
-      display: inline-block;
-      background: white;
-      color: black;
-      padding: 1rem 2rem;
-      margin-top: 2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      font-family: 'Staatliches', sans-serif;
-    }
-    .reviews {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .review {
-      background-color: #1a1a1a;
-      padding: 1.5rem;
-      border-radius: 12px;
-      max-width: 300px;
-      border: 1px solid #2a2a2a;
-    }
-    .review h4 {
-      margin-bottom: 0.5rem;
-      color: #e0e0e0;
-      font-family: 'Black Ops One', sans-serif;
+      margin: 40px 20px;
+      font-size: 1.2rem;
     }
     footer {
-      background-color: #000;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 3rem;
-      border-top: 1px solid #222;
+      background: #000;
+      padding: 30px;
+      margin-top: 50px;
     }
-    .social {
-      margin-top: 1rem;
-    }
-    .social a {
-      color: white;
-      font-size: 1.5rem;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-    .bg-logo {
-      position: absolute;
-      top: 10%;
-      left: 5%;
-      opacity: 0.03;
-      z-index: 0;
-      width: 80%;
-      max-width: 700px;
-    }
-    @media (max-width: 768px) {
-      .offer {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav a {
-        margin-left: 1rem;
-        font-size: 0.8rem;
-      }
-      header img {
-        width: 130px;
-      }
+    .instagram-icon {
+      width: 30px;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="EVOLVE Logo" class="logo" />
+    <h1>Start your evolution</h1>
+    <p>Struktura, progresija i prilagodba — bez prečaca.</p>
+  </header>
 
-<img src="logo.png" class="bg-logo" alt="Evolve Logo Background" />
-
-<header>
-  <img src="logo.png" alt="Logo" />
-  <nav>
-    <a href="#ponuda">Ponuda</a>
-    <a href="#onama">O meni</a>
-    <a href="#recenzije">Recenzije</a>
-    <a href="#kontakt">Kontakt</a>
-    <a href="https://instagram.com/jakov_basic" target="_blank">📷</a>
-  </nav>
-</header>
-
-<section class="section">
-  <h1>Start your evolution</h1>
-  <p>Struktura, progresija i prilagodba — bez prečaca.</p>
-</section>
-
-<section class="section dark" id="ponuda">
-  <h2>Ponuda</h2>
-  <div class="offer">
-    <div class="card">
-      <h3>Live Coaching</h3>
-      <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb. Fokus na tehniku, snagu i tvoje ciljeve.<br><br><strong>Dostupna i opcija poluindividualnih treninga.</strong></p>
-    </div>
-    <div class="card">
-      <h3>Hybrid Coaching</h3>
-      <p>Jedan trening uživo tjedno + online podrška i program. Kvaliteta uz fleksibilnost.</p>
-    </div>
-    <div class="card unavailable">
-      <h3>Online Coaching</h3>
-      <p>Dolazi uskoro. Novi sustav individualnog coachinga.</p>
-    </div>
+  <div class="section">
+    <h2>Live Coaching</h2>
+    <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb.<br>
+    Fokus na tehniku, snagu i tvoje ciljeve.<br>
+    Dostupna opcija poluindividualnih treninga.</p>
   </div>
-</section>
 
-<section class="section" id="onama">
-  <h2>O meni</h2>
-  <p>Moje ime je <strong>Jakov Bašić</strong>, i iza mene je više od 10 godina iskustva u sportu, pokretu i radu s tijelom.</p>
-  <p>Kroz godine treninga i rada s ljudima naučio sam da kvaliteta pokreta, razumijevanje tijela i dosljednost čine razliku.</p>
-  <p>EVOLVE je moj pristup — individualiziran, temeljen na prepoznavanju obrazaca kretanja koji mogu dovesti do nelagode, loših navika i dugoročnih problema.</p>
-</section>
-
-<section class="section dark" id="kontakt">
-  <h2>Kontakt</h2>
-  <a href="mailto:evolve.coaching.hr@gmail.com?subject=Upit sa stranice" class="contact-button">Pošalji upit</a>
-</section>
-
-<section class="section" id="recenzije">
-  <h2>Recenzije</h2>
-  <div class="reviews" id="reviews"></div>
-</section>
-
-<footer>
-  <img src="logo.png" alt="Logo" style="width: 120px; margin-bottom: 1rem;" />
-  <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
-  <div class="social">
-    <a href="https://instagram.com/jakov_basic" target="_blank">📷</a>
-  </div>
-</footer>
-
-<script>
-  ScrollReveal().reveal('h1, h2, .card, .contact-button, .review', {
-    distance: '30px',
-    duration: 800,
-    easing: 'ease-out',
-    origin: 'bottom',
-    interval: 200
-  });
-
-  fetch("https://v1.nocodeapi.com/jakovbasic17/airtable/tWUnRtIAfESFkvqr?tableName=EVOLVE%20COACHING")
-    .then(res => res.json())
-    .then(data => {
-      const reviews = document.getElementById("reviews");
-      data.records.forEach(record => {
-        const name = record.fields["Ime"];
-        const text = record.fields["Recenzija"];
-        if (name && text) {
-          const div = document.createElement("div");
-          div.className = "review";
-          div.innerHTML = `<h4>${name}</h4><p>${text}</p>`;
-          reviews.appendChild(div);
-        }
-      });
-    })
-    .catch(err => {
-      document.getElementById("reviews").innerHTML = "<p>Recenzije trenutno nisu dostupne.</p>";
-    });
-</script>
-
+  <footer>
+    <p>© 2025 EVOLVE Coaching</p>
+    <a href="https://www.instagram.com/jakov_basic/" target="_blank">
+      <img src="instagram.png" alt="Instagram" class="instagram-icon" />
+    </a>
+  </footer>
 </body>
 </html>
