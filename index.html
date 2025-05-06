@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Start your evolution</title>
+  <title>EVOLVE Coaching</title>
   <style>
     body {
-      background-color: black;
-      color: white;
+      background-color: #000;
+      color: #fff;
       font-family: sans-serif;
       margin: 0;
       padding: 0;
@@ -51,13 +51,23 @@
       text-decoration: none;
       font-weight: bold;
     }
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 800px;
-      border: none;
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
       margin-top: 2rem;
+    }
+    .review {
+      background-color: #1a1a1a;
+      padding: 1.5rem;
       border-radius: 12px;
+      max-width: 300px;
+      border: 1px solid #2a2a2a;
+    }
+    .review h4 {
+      margin-bottom: 0.5rem;
+      color: #e0e0e0;
     }
   </style>
 </head>
@@ -103,9 +113,31 @@
 </section>
 
 <section class="section">
-  <h2>Ostavi recenziju</h2>
-  <iframe src="https://airtable.com/embed/shrvUhQm8bSFgxwE0?backgroundColor=black"></iframe>
+  <h2>Recenzije</h2>
+  <div class="reviews" id="reviews"></div>
 </section>
+
+<script>
+  fetch("https://v1.nocodeapi.com/jakovbasic17/airtable/tWUnRtIAfESFkvqr?tableName=EVOLVE%20COACHING")
+    .then(res => res.json())
+    .then(data => {
+      const reviews = document.getElementById("reviews");
+      data.records.forEach(record => {
+        const name = record.fields["Ime"];
+        const text = record.fields["Recenzija"];
+        if (name && text) {
+          const div = document.createElement("div");
+          div.className = "review";
+          div.innerHTML = `<h4>${name}</h4><p>${text}</p>`;
+          reviews.appendChild(div);
+        }
+      });
+    })
+    .catch(err => {
+      document.getElementById("reviews").innerHTML = "<p>Recenzije trenutno nisu dostupne.</p>";
+      console.error(err);
+    });
+</script>
 
 </body>
 </html>
