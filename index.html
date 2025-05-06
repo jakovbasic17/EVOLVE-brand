@@ -12,14 +12,36 @@
       font-family: sans-serif;
       margin: 0;
       padding: 0;
-      text-align: center;
+    }
+    header {
+      background: #000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
     }
     header img {
-      width: 300px;
-      margin-top: 2rem;
+      width: 120px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    nav a:hover {
+      opacity: 0.6;
     }
     .section {
       padding: 4rem 1rem;
+      text-align: center;
     }
     .section.dark {
       background-color: #111;
@@ -74,7 +96,13 @@
 <body>
 
 <header>
-  <img src="logo.png" alt="EVOLVE Logo" />
+  <img src="logo.png" alt="Logo" />
+  <nav>
+    <a href="#ponuda">Ponuda</a>
+    <a href="#onama">O meni</a>
+    <a href="#recenzije">Recenzije</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
 </header>
 
 <section class="section">
@@ -82,12 +110,12 @@
   <p>Struktura, progresija i prilagodba — bez prečaca.</p>
 </section>
 
-<section class="section dark">
+<section class="section dark" id="ponuda">
   <h2>Ponuda</h2>
   <div class="offer">
     <div class="card">
       <h3>Live Coaching</h3>
-      <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb. Fokus na tehniku, snagu i tvoje ciljeve.</p>
+      <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb. Fokus na tehniku, snagu i tvoje ciljeve.<br><br><strong>Dostupna i opcija poluindividualnih treninga (samo 2 osobe).</strong></p>
     </div>
     <div class="card">
       <h3>Hybrid Coaching</h3>
@@ -100,19 +128,19 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="onama">
   <h2>O meni</h2>
   <p>Moje ime je <strong>Jakov Bašić</strong>, i iza mene je više od 10 godina iskustva u sportu, pokretu i radu s tijelom.</p>
   <p>Kroz godine treninga i rada s ljudima naučio sam da kvaliteta pokreta, razumijevanje tijela i dosljednost čine razliku.</p>
   <p>EVOLVE je moj pristup — individualiziran, temeljen na prepoznavanju obrazaca kretanja koji mogu dovesti do nelagode, loših navika i dugoročnih problema.</p>
 </section>
 
-<section class="section dark">
+<section class="section dark" id="kontakt">
   <h2>Kontakt</h2>
   <a href="mailto:evolve.coaching.hr@gmail.com?subject=Upit sa stranice" class="contact-button">Pošalji upit</a>
 </section>
 
-<section class="section">
+<section class="section" id="recenzije">
   <h2>Recenzije</h2>
   <div class="reviews" id="reviews"></div>
 </section>
