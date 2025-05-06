@@ -5,14 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EVOLVE Coaching</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Space Grotesk', sans-serif;
       background: #0d0d0d;
       color: white;
+      font-family: 'Staatliches', sans-serif;
     }
     header {
       position: sticky;
@@ -31,8 +30,7 @@
       color: white;
       text-decoration: none;
       margin-left: 1.5rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 500;
+      font-size: 1rem;
     }
     nav a:hover {
       opacity: 0.6;
@@ -42,7 +40,7 @@
       text-align: center;
     }
     h1, h2, h3 {
-      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
     }
     .offer {
       display: flex;
@@ -82,21 +80,27 @@
       border-radius: 10px;
       max-width: 300px;
     }
-    .footer {
+    footer {
       background: #000;
       color: white;
       text-align: center;
       padding: 2rem;
       border-top: 1px solid #333;
     }
-    .footer img {
+    footer img {
       width: 30px;
       margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
-
 <header>
   <img src="logo.png" alt="EVOLVE Logo">
   <nav>
@@ -148,13 +152,14 @@
   <div class="reviews" id="reviews"></div>
 </section>
 
-<footer class="footer">
+<footer>
   <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
   <a href="https://instagram.com/jakov_basic" target="_blank">
     <img src="instagram.png" alt="Instagram">
   </a>
 </footer>
 
+<script src="https://unpkg.com/scrollreveal"></script>
 <script>
   ScrollReveal().reveal('h1, h2, .card, .contact-button, .review', {
     distance: '30px',
