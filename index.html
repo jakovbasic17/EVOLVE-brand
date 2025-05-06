@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EVOLVE Coaching</title>
   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Staatliches&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
   <style>
     body {
       background-color: #000;
@@ -13,6 +14,7 @@
       font-family: 'Staatliches', sans-serif;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
     header {
       background: #000;
@@ -27,16 +29,14 @@
     }
     header img {
       width: 160px;
-      height: auto;
     }
     nav a {
       color: white;
       text-decoration: none;
       margin-left: 1.5rem;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-family: 'Staatliches', sans-serif;
       letter-spacing: 1px;
-      transition: opacity 0.2s;
     }
     nav a:hover {
       opacity: 0.6;
@@ -64,6 +64,10 @@
       padding: 2rem;
       border-radius: 12px;
       width: 300px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
     }
     .card.unavailable {
       opacity: 0.4;
@@ -98,9 +102,50 @@
       color: #e0e0e0;
       font-family: 'Black Ops One', sans-serif;
     }
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      border-top: 1px solid #222;
+    }
+    .social {
+      margin-top: 1rem;
+    }
+    .social a {
+      color: white;
+      font-size: 1.5rem;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .bg-logo {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      opacity: 0.03;
+      z-index: 0;
+      width: 80%;
+      max-width: 700px;
+    }
+    @media (max-width: 768px) {
+      .offer {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.8rem;
+      }
+      header img {
+        width: 130px;
+      }
+    }
   </style>
 </head>
 <body>
+
+<img src="logo.png" class="bg-logo" alt="Evolve Logo Background" />
 
 <header>
   <img src="logo.png" alt="Logo" />
@@ -109,6 +154,7 @@
     <a href="#onama">O meni</a>
     <a href="#recenzije">Recenzije</a>
     <a href="#kontakt">Kontakt</a>
+    <a href="https://instagram.com/jakov_basic" target="_blank">📷</a>
   </nav>
 </header>
 
@@ -122,7 +168,7 @@
   <div class="offer">
     <div class="card">
       <h3>Live Coaching</h3>
-      <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb. Fokus na tehniku, snagu i tvoje ciljeve.<br><br><strong>Dostupna i opcija poluindividualnih treninga (samo 2 osobe).</strong></p>
+      <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb. Fokus na tehniku, snagu i tvoje ciljeve.<br><br><strong>Dostupna i opcija poluindividualnih treninga.</strong></p>
     </div>
     <div class="card">
       <h3>Hybrid Coaching</h3>
@@ -152,7 +198,23 @@
   <div class="reviews" id="reviews"></div>
 </section>
 
+<footer>
+  <img src="logo.png" alt="Logo" style="width: 120px; margin-bottom: 1rem;" />
+  <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
+  <div class="social">
+    <a href="https://instagram.com/jakov_basic" target="_blank">📷</a>
+  </div>
+</footer>
+
 <script>
+  ScrollReveal().reveal('h1, h2, .card, .contact-button, .review', {
+    distance: '30px',
+    duration: 800,
+    easing: 'ease-out',
+    origin: 'bottom',
+    interval: 200
+  });
+
   fetch("https://v1.nocodeapi.com/jakovbasic17/airtable/tWUnRtIAfESFkvqr?tableName=EVOLVE%20COACHING")
     .then(res => res.json())
     .then(data => {
@@ -170,7 +232,6 @@
     })
     .catch(err => {
       document.getElementById("reviews").innerHTML = "<p>Recenzije trenutno nisu dostupne.</p>";
-      console.error(err);
     });
 </script>
 
