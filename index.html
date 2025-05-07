@@ -2,81 +2,93 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EVOLVE Coaching</title>
-  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
+      font-family: system-ui, sans-serif;
       background-color: #0d0d0d;
       color: white;
-      font-family: 'Staatliches', sans-serif;
     }
     header {
       position: sticky;
       top: 0;
-      background: #000;
+      background-color: black;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      z-index: 999;
+      z-index: 1000;
     }
     header img {
       height: 60px;
     }
     nav a {
       color: white;
-      text-decoration: none;
       margin-left: 1.5rem;
-      font-size: 1rem;
-    }
-    nav a:hover {
-      opacity: 0.6;
+      text-decoration: none;
+      font-weight: bold;
     }
     section {
-      padding: 4rem 1rem;
+      padding: 4rem 2rem;
       text-align: center;
     }
-    h1, h2, h3 {
+    h2 {
       font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .offer-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
     }
     .card {
       background: #1a1a1a;
-      border: 1px solid #333;
       padding: 2rem;
-      margin: 1rem auto;
-      max-width: 700px;
-      border-radius: 10px;
+      border-radius: 12px;
+      width: 300px;
+      border: 1px solid #333;
       transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
     }
-    .footer {
-      background: #000;
-      color: white;
+    .unavailable {
+      opacity: 0.4;
+    }
+    .blog-section {
+      background-color: #121212;
+      border-top: 1px solid #333;
+      padding: 4rem 2rem;
+    }
+    .blog-card {
+      background: #1c1c1c;
+      border: 1px solid #444;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    footer {
+      background-color: black;
       text-align: center;
       padding: 2rem;
       border-top: 1px solid #333;
     }
-    .footer img {
+    footer img {
       width: 30px;
       margin-top: 1rem;
-    }
-    @media (max-width: 768px) {
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="EVOLVE Logo" />
+  <img src="logo.png" alt="EVOLVE Logo">
   <nav>
     <a href="#pocetna">Početna</a>
     <a href="#ponuda">Ponuda</a>
@@ -87,15 +99,26 @@
 </header>
 
 <section id="pocetna">
-  <h1>Start your evolution</h1>
+  <h2>Start your evolution</h2>
   <p>Struktura, progresija i prilagodba — bez prečaca.</p>
 </section>
 
 <section id="ponuda">
   <h2>Ponuda</h2>
-  <p>Live Coaching — Gyms4You Nova Galerija Zagreb. Dostupna opcija poluindividualnih treninga.</p>
-  <p>Hybrid Coaching — uživo + online podrška.</p>
-  <p>Online Coaching — trenutno nedostupan.</p>
+  <div class="offer-container">
+    <div class="card">
+      <h3>Live Coaching</h3>
+      <p>Potpuno individualizirani treninzi uživo na lokaciji Gyms4You Nova Galerija Zagreb.<br>Dostupna opcija poluindividualnih treninga.</p>
+    </div>
+    <div class="card">
+      <h3>Hybrid Coaching</h3>
+      <p>Jedan trening uživo tjedno + online podrška i program. Kvaliteta uz fleksibilnost.</p>
+    </div>
+    <div class="card unavailable">
+      <h3>Online Coaching</h3>
+      <p>Dolazi uskoro. Novi sustav individualnog coachinga.</p>
+    </div>
+  </div>
 </section>
 
 <section id="onama">
@@ -104,9 +127,9 @@
   <p>EVOLVE je moj pristup — individualiziran, temeljen na prepoznavanju obrazaca kretanja koji mogu dovesti do nelagode, loših navika i dugoročnih problema.</p>
 </section>
 
-<section id="blog">
+<section id="blog" class="blog-section">
   <h2>Blog</h2>
-  <div class="card">
+  <div class="blog-card">
     <h3>Pogrešno shvaćanje progressive overloada</h3>
     <p><strong>Blog post #1 — by Jakov Bašić</strong></p>
     <p>Progressive overload najkraće znači: postepeno povećavanje zahtjeva na mišić kako bi rastao. Većina ga tumači kao “samo dodaj više kila” — i tu već počinju problemi.</p>
@@ -122,23 +145,12 @@
   <p>evolve.coaching.hr@gmail.com</p>
 </section>
 
-<footer class="footer">
+<footer>
   <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
   <a href="https://instagram.com/jakov_basic" target="_blank">
-    <img src="instagram.png" alt="Instagram" />
+    <img src="instagram.png" alt="Instagram">
   </a>
 </footer>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-  ScrollReveal().reveal('h2, .card', {
-    distance: '30px',
-    duration: 800,
-    easing: 'ease-out',
-    origin: 'bottom',
-    interval: 200
-  });
-</script>
 
 </body>
 </html>
