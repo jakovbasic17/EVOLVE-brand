@@ -1,1 +1,41 @@
-body { font-family: sans-serif; background-color: #111; color: white; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000;
+}
+.logo {
+  height: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.card {
+  background-color: #222;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+}
+.unavailable {
+  opacity: 0.4;
+}
+.insta-icon {
+  width: 28px;
+  margin-top: 10px;
+}
