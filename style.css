@@ -1,53 +1,68 @@
 
 body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #111;
-    color: white;
+  margin: 0;
+  font-family: 'Urbanist', sans-serif;
+  background: #0b0b0b;
+  color: white;
 }
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    padding: 1rem;
-}
-
-.logo {
-    height: 40px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main {
-    padding: 2rem;
-}
-
 h1, h2, h3 {
-    color: #fff;
+  font-family: 'Cinzel', serif;
+  text-align: center;
 }
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 1rem 2rem;
+}
+.logo {
+  height: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+#hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+}
+.unavailable {
+  opacity: 0.3;
+}
 footer {
-    background-color: black;
-    padding: 1rem;
-    text-align: center;
+  background: black;
+  text-align: center;
+  padding: 2rem;
 }
-
+.footer-logo {
+  width: 60px;
+  margin-bottom: 1rem;
+}
 .instagram-icon {
-    width: 24px;
-    margin-top: 0.5rem;
-}
-
-.disabled {
-    color: gray;
+  width: 30px;
+  margin-top: 1rem;
 }
