@@ -18,59 +18,100 @@
       background-color: #000;
       color: #fff;
       font-family: 'Inter', sans-serif;
-    }
-
-    .button, .btn {
-      background-color: var(--evolve-main);
-      color: var(--evolve-text-light);
-      border: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-
-    .button:hover, .btn:hover {
-      background-color: var(--evolve-hover);
-    }
-
-    h1, h2, h3, h4, h5 {
-      color: var(--evolve-main);
-    }
-
-    .card {
-      background-color: var(--evolve-bg-card);
-      border-left: 4px solid var(--evolve-main);
-      padding: 16px;
-      border-radius: 8px;
-      color: #000;
-    }
-
-    .card.unavailable {
-      opacity: 0.4;
-    }
-
-    a:hover {
-      color: var(--evolve-main);
+      margin: 0;
+      padding: 0;
     }
 
     header, footer {
       background-color: #000;
+      padding: 16px;
     }
 
-    .logo, .footer-logo {
-      filter: brightness(0) saturate(100%) invert(40%) sepia(11%) saturate(624%) hue-rotate(9deg) brightness(93%) contrast(89%);
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
     }
 
     nav ul li a {
       color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
     }
 
     nav ul li a:hover {
       color: var(--evolve-main);
     }
 
+    h1, h2, h3, h4, h5 {
+      color: var(--evolve-main);
+    }
+
+    .button, .btn, a.read-more {
+      background-color: var(--evolve-main);
+      color: var(--evolve-text-light) !important;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover, .btn:hover, a.read-more:hover {
+      background-color: var(--evolve-hover);
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 16px;
+    }
+
+    .card {
+      background-color: var(--evolve-bg-card);
+      border-left: 4px solid var(--evolve-main);
+      border-radius: 8px;
+      padding: 16px;
+      color: #000;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .card.unavailable {
+      opacity: 0.4;
+    }
+
+    .logo, .footer-logo {
+      height: 50px;
+      filter: brightness(0) saturate(100%) invert(40%) sepia(11%) saturate(624%) hue-rotate(9deg) brightness(93%) contrast(89%);
+    }
+
     .instagram-icon {
+      height: 30px;
       filter: brightness(0) invert(1);
+    }
+
+    #recenzije iframe {
+      border: none;
+      filter: grayscale(1) contrast(1.1);
+    }
+
+    a {
+      color: var(--evolve-main);
+    }
+
+    a:hover {
+      color: var(--evolve-hover);
+    }
+
+    a.read-more.disabled {
+      pointer-events: none;
+      opacity: 0.6;
+      cursor: not-allowed;
     }
   </style>
 </head>
@@ -122,14 +163,14 @@
       <div class="card">
         <h3>Pogrešno shvaćanje progressive overloada</h3>
         <p>Kada forma pada pod težinom, to nije progresija — to je kompenzacija. Kvaliteta izvedbe mora pratiti opterećenje.</p>
-        <a href="#blog">Pročitaj više</a>
+        <a href="#" class="read-more disabled">Pročitaj više</a>
       </div>
     </div>
   </section>
 
   <section id="recenzije">
     <h2>Recenzije</h2>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/app3DC9xsS3eOHcdc/shrIZD21vYTnslhkR?backgroundColor=purple&viewControls=off" frameborder="0" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/app3DC9xsS3eOHcdc/shrIZD21vYTnslhkR?backgroundColor=purple&viewControls=off" frameborder="0" width="100%" height="533"></iframe>
   </section>
 
   <section id="kontakt">
