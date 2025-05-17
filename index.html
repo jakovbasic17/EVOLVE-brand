@@ -20,31 +20,7 @@
     }
 
     section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background-color: #111;
-      color: #fff;
-      border-left: 4px solid #5a5136;
-      border-radius: 8px;
-      padding: 20px;
-      max-width: 700px;
-      text-align: left;
-    }
-
-    .header, footer {
-      background-color: #000;
-      padding: 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
@@ -66,6 +42,44 @@
     .logo {
       filter: brightness(0) saturate(100%) invert(40%) sepia(11%) saturate(624%) hue-rotate(9deg) brightness(93%) contrast(89%);
       height: 50px;
+    }
+
+    .header, footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #111;
+      color: #fff;
+      border: 1px solid #5a5136;
+      border-radius: 16px;
+      padding: 30px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 0 0 transparent;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px rgba(90, 81, 54, 0.6);
+    }
+
+    .card h3 {
+      color: #b29f6e;
+      margin-bottom: 16px;
+    }
+
+    .card.unavailable {
+      opacity: 0.3;
     }
 
     strong {
@@ -111,7 +125,7 @@
         <h3>Hybrid coaching</h3>
         <p>Jedan trening uživo + online plan. Svakodnevna podrška i tjedni check-in.</p>
       </div>
-      <div class="card" style="opacity: 0.4;">
+      <div class="card unavailable">
         <h3>Online coaching</h3>
         <p>Trenutno nedostupno. Dolazi uskoro.</p>
       </div>
@@ -121,20 +135,6 @@
   <section id="omeni">
     <h2>O meni</h2>
     <p>Moje ime je <strong>Jakov Bašić</strong>. Kroz sport sam prošao gotovo cijeli život — od plivanja i nogometa do street workouta i teretane. Tek posljednjih godinu dana počeo sam dublje razumijevati što znači kvalitetan rad s tijelom. Danas pomažem drugima kroz individualiziran pristup, analizu pokreta i fokus na dugoročne rezultate.</p>
-  </section>
-
-  <section id="blog">
-    <h2>Blog</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Pogrešno shvaćanje progressive overloada</h3>
-        <p>Kada forma pada pod težinom, to nije progresija — to je kompenzacija. Kvaliteta izvedbe mora pratiti opterećenje.</p>
-        <p><strong>Progresivno povećanje opterećenja</strong> ne smije se tumačiti kao nužna potreba za većim kilažama svaki tjedan. Ako ne možeš zadržati <strong>stabilnu formu</strong>, ne postoji pravi progres.</p>
-        <p>Tijelo se adaptira na <strong>tenziju i mehaničko opterećenje</strong>, ne na ego liftanje.</p>
-        <p>👉 Dodaj 1–2 serije, zadrži kilažu, uspori negativnu fazu, poboljšaj kontrolu – to je progres.</p>
-        <p>Kad prestaneš kompenzirati, počinješ rasti.</p>
-      </div>
-    </div>
   </section>
 
   <footer>
