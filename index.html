@@ -6,25 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EVOLVE Coaching</title>
   <style>
-    header.header {
-      padding: 40px 20px 10px;
+    :root {
+      --evolve-color: #5a5136;
     }
 
-    nav ul li a {
-      color: #5a5136;
-      font-weight: bold;
-      font-size: 1rem;
-      text-transform: uppercase;
-    }
-
-    nav ul li a:hover {
-      color: #fff;
-    }
-
-    nav ul {
-      margin-top: 30px;
-    }
-    
     body {
       background-color: #000;
       color: #fff;
@@ -35,7 +20,7 @@
 
     h1, h2, h3 {
       text-align: center;
-      color: #5a5136;
+      color: var(--evolve-color);
     }
 
     section {
@@ -43,30 +28,37 @@
       text-align: center;
     }
 
+    .header {
+      background-color: #000;
+      padding: 60px 20px 30px;
+      text-align: center;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 24px;
       padding: 0;
-      margin: 0;
+      margin: 30px 0 0 0;
     }
 
     nav ul li a {
       text-decoration: none;
-      color: white;
+      color: var(--evolve-color);
       font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
     }
 
     .logo {
       filter: brightness(0) saturate(100%) invert(40%) sepia(11%) saturate(624%) hue-rotate(9deg) brightness(93%) contrast(89%);
       height: 50px;
-    }
-
-    .header, footer {
-      background-color: #000;
-      padding: 20px;
-      text-align: center;
     }
 
     .grid {
@@ -80,7 +72,7 @@
     .card {
       background-color: #111;
       color: #fff;
-      border: 1px solid #5a5136;
+      border: 1px solid var(--evolve-color);
       border-radius: 16px;
       padding: 30px;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -101,16 +93,38 @@
       opacity: 0.3;
     }
 
-    strong {
-      color: white;
+    footer {
+      padding: 40px 20px;
+      background: #000;
+      text-align: center;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
     }
 
-    a {
-      color: #5a5136;
+    .insta-icon {
+      height: 36px;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    a:hover {
-      color: #fff;
+    .insta-icon:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 6px var(--evolve-color));
+    }
+
+    @media screen and (max-width: 600px) {
+      .logo {
+        height: 40px;
+      }
+      nav ul {
+        gap: 12px;
+        font-size: 0.85rem;
+      }
+      .card {
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -157,6 +171,9 @@
   </section>
 
   <footer>
+    <a href="https://instagram.com/jakov_basic" target="_blank">
+      <img src="images/instagram_icon_evolve_v2.png" alt="Instagram" class="insta-icon" />
+    </a>
     <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
   </footer>
 </body>
