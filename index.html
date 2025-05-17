@@ -5,15 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EVOLVE Coaching</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --evolve-main: #5a5136;
-      --evolve-hover: #3e3927;
-      --evolve-bg-card: #f7f6f3;
-      --evolve-text-light: #ffffff;
-    }
-
     body {
       background-color: #000;
       color: #fff;
@@ -22,96 +14,70 @@
       padding: 0;
     }
 
-    header, footer {
-      background-color: #000;
-      padding: 16px;
+    h1, h2, h3 {
+      text-align: center;
+      color: #5a5136;
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: var(--evolve-main);
-    }
-
-    h1, h2, h3, h4, h5 {
-      color: var(--evolve-main);
-    }
-
-    .button, .btn, a.read-more {
-      background-color: var(--evolve-main);
-      color: var(--evolve-text-light) !important;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;
-    }
-
-    .button:hover, .btn:hover, a.read-more:hover {
-      background-color: var(--evolve-hover);
+    section {
+      padding: 40px 20px;
+      text-align: center;
     }
 
     .grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
-      padding: 16px;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
     }
 
     .card {
-      background-color: var(--evolve-bg-card);
-      border-left: 4px solid var(--evolve-main);
+      background-color: #111;
+      color: #fff;
+      border-left: 4px solid #5a5136;
       border-radius: 8px;
-      padding: 16px;
-      color: #000;
-      flex: 1;
-      min-width: 250px;
+      padding: 20px;
+      max-width: 700px;
+      text-align: left;
     }
 
-    .card.unavailable {
-      opacity: 0.4;
+    .header, footer {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
     }
 
-    .logo, .footer-logo {
-      height: 50px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .logo {
       filter: brightness(0) saturate(100%) invert(40%) sepia(11%) saturate(624%) hue-rotate(9deg) brightness(93%) contrast(89%);
+      height: 50px;
     }
 
-    .instagram-icon {
-      height: 30px;
-      filter: brightness(0) invert(1);
-    }
-
-    #recenzije iframe {
-      border: none;
-      filter: grayscale(1) contrast(1.1);
+    strong {
+      color: white;
     }
 
     a {
-      color: var(--evolve-main);
+      color: #5a5136;
     }
 
     a:hover {
-      color: var(--evolve-hover);
-    }
-
-    a.read-more.disabled {
-      pointer-events: none;
-      opacity: 0.6;
-      cursor: not-allowed;
+      color: #fff;
     }
   </style>
 </head>
@@ -145,7 +111,7 @@
         <h3>Hybrid coaching</h3>
         <p>Jedan trening uživo + online plan. Svakodnevna podrška i tjedni check-in.</p>
       </div>
-      <div class="card unavailable">
+      <div class="card" style="opacity: 0.4;">
         <h3>Online coaching</h3>
         <p>Trenutno nedostupno. Dolazi uskoro.</p>
       </div>
@@ -163,27 +129,16 @@
       <div class="card">
         <h3>Pogrešno shvaćanje progressive overloada</h3>
         <p>Kada forma pada pod težinom, to nije progresija — to je kompenzacija. Kvaliteta izvedbe mora pratiti opterećenje.</p>
-        <a href="#" class="read-more disabled">Pročitaj više</a>
+        <p><strong>Progresivno povećanje opterećenja</strong> ne smije se tumačiti kao nužna potreba za većim kilažama svaki tjedan. Ako ne možeš zadržati <strong>stabilnu formu</strong>, ne postoji pravi progres.</p>
+        <p>Tijelo se adaptira na <strong>tenziju i mehaničko opterećenje</strong>, ne na ego liftanje.</p>
+        <p>👉 Dodaj 1–2 serije, zadrži kilažu, uspori negativnu fazu, poboljšaj kontrolu – to je progres.</p>
+        <p>Kad prestaneš kompenzirati, počinješ rasti.</p>
       </div>
     </div>
   </section>
 
-  <section id="recenzije">
-    <h2>Recenzije</h2>
-    <iframe class="airtable-embed" src="https://airtable.com/embed/app3DC9xsS3eOHcdc/shrIZD21vYTnslhkR?backgroundColor=purple&viewControls=off" frameborder="0" width="100%" height="533"></iframe>
-  </section>
-
-  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>evolve.coaching.hr@gmail.com</p>
-  </section>
-
   <footer>
-    <img src="images/logo.png" alt="EVOLVE Logo Footer" class="footer-logo" />
     <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
-    <a href="https://instagram.com/jakov_basic" target="_blank">
-      <img src="images/instagram.png" alt="Instagram" class="instagram-icon" />
-    </a>
   </footer>
 </body>
 </html>
