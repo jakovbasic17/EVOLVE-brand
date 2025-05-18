@@ -28,39 +28,6 @@
       text-align: center;
     }
 
-    .header {
-      background-color: #000;
-      padding: 60px 20px 30px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-      padding: 0;
-      margin: 30px 0 0 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: var(--evolve-color);
-      font-weight: bold;
-      font-size: 1rem;
-      text-transform: uppercase;
-    }
-
-    nav ul li a:hover {
-      color: #fff;
-    }
-
-    .logo {
-      filter: brightness(0) saturate(100%) invert(40%) sepia(11%) saturate(624%) hue-rotate(9deg) brightness(93%) contrast(89%);
-      height: 50px;
-    }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -76,17 +43,11 @@
       border-radius: 16px;
       padding: 30px;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
-      box-shadow: 0 0 0 transparent;
     }
 
     .card:hover {
       transform: scale(1.02);
       box-shadow: 0 0 20px rgba(90, 81, 54, 0.6);
-    }
-
-    .card h3 {
-      color: #b29f6e;
-      margin-bottom: 16px;
     }
 
     .card.unavailable {
@@ -98,10 +59,6 @@
       background: #000;
       text-align: center;
       font-size: 0.9rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
     }
 
     .insta-icon {
@@ -114,14 +71,39 @@
       filter: drop-shadow(0 0 6px var(--evolve-color));
     }
 
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background-color: #1a1a1a;
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    form button {
+      background-color: var(--evolve-color);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #3e3927;
+    }
+
     @media screen and (max-width: 600px) {
-      .logo {
-        height: 40px;
-      }
-      nav ul {
-        gap: 12px;
-        font-size: 0.85rem;
-      }
       .card {
         padding: 20px;
       }
@@ -129,19 +111,6 @@
   </style>
 </head>
 <body>
-  <header class="header">
-    <img src="images/logo.png" alt="EVOLVE Logo" class="logo" />
-    <nav>
-      <ul>
-        <li><a href="#ponuda">Ponuda</a></li>
-        <li><a href="#omeni">O meni</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#recenzije">Recenzije</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <section id="hero">
     <h1>Start your evolution</h1>
     <p>Struktura, progresija i prilagodba — bez prečaca.</p>
@@ -152,7 +121,7 @@
     <div class="grid">
       <div class="card">
         <h3>Live coaching</h3>
-        <p>Potpuno individualizirani treninzi uživo (Gyms4You Nova Galerija Zagreb). Dostupna i opcija poluindividualnih treninga.</p>
+        <p>Potpuno individualizirani treninzi uživo. Dostupna i opcija poluindividualnih treninga.</p>
       </div>
       <div class="card">
         <h3>Hybrid coaching</h3>
@@ -165,9 +134,22 @@
     </div>
   </section>
 
-  <section id="omeni">
-    <h2>O meni</h2>
-    <p>Moje ime je <strong>Jakov Bašić</strong>. Kroz sport sam prošao gotovo cijeli život — od plivanja i nogometa do street workouta i teretane. Tek posljednjih godinu dana počeo sam dublje razumijevati što znači kvalitetan rad s tijelom. Danas pomažem drugima kroz individualiziran pristup, analizu pokreta i fokus na dugoročne rezultate.</p>
+  <section id="prijava">
+    <h2>Prijavi se za coaching</h2>
+    <p>Ostavi podatke i automatski odaberi termin Zoom poziva.</p>
+    <form action="https://formspree.io/f/mayrlqpo" method="POST">
+      <input type="hidden" name="_redirect" value="https://calendly.com/evolve-coaching-hr">
+      <label for="ime">Ime:</label><br/>
+      <input type="text" id="ime" name="ime" required><br/>
+
+      <label for="email">Email:</label><br/>
+      <input type="email" id="email" name="_replyto" required><br/>
+
+      <label for="cilj">Koji je tvoj cilj?</label><br/>
+      <textarea id="cilj" name="poruka" rows="5" required></textarea><br/>
+
+      <button type="submit">Pošalji i odaberi termin</button>
+    </form>
   </section>
 
   <footer>
