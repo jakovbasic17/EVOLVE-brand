@@ -18,14 +18,38 @@
       padding: 0;
     }
 
-    h1, h2, h3 {
+    header {
+      padding: 30px;
       text-align: center;
+    }
+
+    header h1 {
       color: var(--evolve-color);
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--evolve-color);
+      font-weight: bold;
     }
 
     section {
       padding: 60px 20px;
       text-align: center;
+    }
+
+    h2 {
+      color: var(--evolve-color);
     }
 
     .grid {
@@ -54,65 +78,43 @@
       opacity: 0.3;
     }
 
-    footer {
-      padding: 40px 20px;
-      background: #000;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    .insta-icon {
-      height: 36px;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .insta-icon:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 6px var(--evolve-color));
-    }
-
-    form {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 8px;
-      border: none;
-      background-color: #1a1a1a;
-      color: white;
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    form button {
+    .cta-button {
       background-color: var(--evolve-color);
-      color: white;
-      border: none;
-      padding: 12px 24px;
+      color: #fff;
+      padding: 14px 28px;
       border-radius: 8px;
       font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      text-decoration: none;
+      margin-top: 30px;
+      display: inline-block;
     }
 
-    form button:hover {
+    .cta-button:hover {
       background-color: #3e3927;
     }
 
-    @media screen and (max-width: 600px) {
-      .card {
-        padding: 20px;
-      }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>EVOLVE Coaching</h1>
+    <nav>
+      <ul>
+        <li><a href="#ponuda">Ponuda</a></li>
+        <li><a href="#omeni">O meni</a></li>
+        <li><a href="prijava.html">Prijava</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <section id="hero">
-    <h1>Start your evolution</h1>
+    <h2>Start your evolution</h2>
     <p>Struktura, progresija i prilagodba — bez prečaca.</p>
   </section>
 
@@ -134,29 +136,13 @@
     </div>
   </section>
 
-  <section id="prijava">
-    <h2>Prijavi se za coaching</h2>
-    <p>Ostavi podatke i automatski odaberi termin Zoom poziva.</p>
-    <form action="https://formspree.io/f/mayrlqpo" method="POST">
-      <input type="hidden" name="_redirect" value="https://calendly.com/evolve-coaching-hr">
-      <label for="ime">Ime:</label><br/>
-      <input type="text" id="ime" name="ime" required><br/>
-
-      <label for="email">Email:</label><br/>
-      <input type="email" id="email" name="_replyto" required><br/>
-
-      <label for="cilj">Koji je tvoj cilj?</label><br/>
-      <textarea id="cilj" name="poruka" rows="5" required></textarea><br/>
-
-      <button type="submit">Pošalji i odaberi termin</button>
-    </form>
+  <section id="omeni">
+    <h2>O meni</h2>
+    <p>Moje ime je <strong>Jakov Bašić</strong>. Kroz sport sam prošao gotovo cijeli život — od plivanja i nogometa do street workouta i teretane. Tek posljednjih godinu dana počeo sam dublje razumijevati što znači kvalitetan rad s tijelom. Danas pomažem drugima kroz individualiziran pristup, analizu pokreta i fokus na dugoročne rezultate.</p>
   </section>
 
   <footer>
-    <a href="https://instagram.com/jakov_basic" target="_blank">
-      <img src="images/instagram_icon_evolve_v2.png" alt="Instagram" class="insta-icon" />
-    </a>
-    <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
+    &copy; 2025 Jakov Bašić — EVOLVE Coaching
   </footer>
 </body>
 </html>
