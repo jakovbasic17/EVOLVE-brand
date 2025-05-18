@@ -2,56 +2,49 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EVOLVE Coaching</title>
   <style>
     :root {
       --evolve-color: #5a5136;
     }
-
     body {
+      margin: 0;
       background-color: #000;
       color: #fff;
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
     }
-
     header {
-      padding: 30px;
       text-align: center;
+      padding: 40px 20px 10px;
     }
-
-    header h1 {
-      color: var(--evolve-color);
-      margin-bottom: 10px;
-    }
-
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       padding: 0;
-      margin: 0;
+      margin: 30px 0 0 0;
     }
-
     nav ul li a {
       text-decoration: none;
       color: var(--evolve-color);
       font-weight: bold;
+      text-transform: uppercase;
     }
-
+    .logo {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: var(--evolve-color);
+    }
     section {
       padding: 60px 20px;
       text-align: center;
     }
-
-    h2 {
-      color: var(--evolve-color);
-    }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -59,62 +52,80 @@
       max-width: 1100px;
       margin: 0 auto;
     }
-
     .card {
       background-color: #111;
-      color: #fff;
       border: 1px solid var(--evolve-color);
       border-radius: 16px;
       padding: 30px;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
-
     .card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 20px rgba(90, 81, 54, 0.6);
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(90, 81, 54, 0.7);
     }
-
     .card.unavailable {
       opacity: 0.3;
     }
-
-    .cta-button {
+    .cta a {
       background-color: var(--evolve-color);
-      color: #fff;
+      color: white;
       padding: 14px 28px;
       border-radius: 8px;
       font-weight: bold;
       text-decoration: none;
-      margin-top: 30px;
-      display: inline-block;
     }
-
-    .cta-button:hover {
+    .cta a:hover {
       background-color: #3e3927;
     }
-
     footer {
+      background-color: #000;
+      padding: 40px 20px;
       text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      color: #666;
+    }
+    .insta-icon {
+      height: 36px;
+      margin-top: 10px;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .insta-icon:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 6px var(--evolve-color));
+    }
+    .footer-logo {
+      height: 28px;
+      margin-top: 20px;
+      opacity: 0.6;
+    }
+    .review-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .review {
+      background-color: #111;
+      border-left: 4px solid var(--evolve-color);
+      padding: 20px;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>EVOLVE Coaching</h1>
+    <img src="images/logo.png" alt="EVOLVE Logo" class="logo">
     <nav>
       <ul>
         <li><a href="#ponuda">Ponuda</a></li>
         <li><a href="#omeni">O meni</a></li>
-        <li><a href="prijava.html">Prijava</a></li>
+        <li><a href="#recenzije">Recenzije</a></li>
+        <li><a href="#prijava">Prijava</a></li>
       </ul>
     </nav>
   </header>
 
   <section id="hero">
-    <h2>Start your evolution</h2>
+    <h1>Start your evolution</h1>
     <p>Struktura, progresija i prilagodba — bez prečaca.</p>
   </section>
 
@@ -123,7 +134,7 @@
     <div class="grid">
       <div class="card">
         <h3>Live coaching</h3>
-        <p>Potpuno individualizirani treninzi uživo. Dostupna i opcija poluindividualnih treninga.</p>
+        <p>Potpuno individualizirani treninzi uživo (Gyms4You Nova Galerija Zagreb). Dostupna i opcija poluindividualnih treninga.</p>
       </div>
       <div class="card">
         <h3>Hybrid coaching</h3>
@@ -136,13 +147,32 @@
     </div>
   </section>
 
+  <section id="prijava">
+    <h2>Prijavi se na coaching</h2>
+    <div class="cta">
+      <a href="prijava.html">📩 Otvori prijavu</a>
+    </div>
+  </section>
+
   <section id="omeni">
     <h2>O meni</h2>
-    <p>Moje ime je <strong>Jakov Bašić</strong>. Kroz sport sam prošao gotovo cijeli život — od plivanja i nogometa do street workouta i teretane. Tek posljednjih godinu dana počeo sam dublje razumijevati što znači kvalitetan rad s tijelom. Danas pomažem drugima kroz individualiziran pristup, analizu pokreta i fokus na dugoročne rezultate.</p>
+    <p>Moje ime je <strong>Jakov Bašić</strong>. Kroz sport sam prošao gotovo cijeli život — od plivanja i nogometa do street workouta i teretane. Danas pomažem drugima kroz individualiziran pristup, analizu pokreta i fokus na dugoročne rezultate.</p>
+  </section>
+
+  <section id="recenzije">
+    <h2>Recenzije</h2>
+    <div class="review-list" id="review-list">
+      <!-- Recenzije će se automatski dohvatiti i prikazati ovdje -->
+    </div>
   </section>
 
   <footer>
-    &copy; 2025 Jakov Bašić — EVOLVE Coaching
+    <a href="https://instagram.com/jakov_basic" target="_blank">
+      <img src="images/instagram_icon_evolve_v2.png" alt="Instagram" class="insta-icon" />
+    </a>
+    <br>
+    <img src="images/logo.png" alt="EVOLVE Logo" class="footer-logo" />
+    <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
   </footer>
 </body>
 </html>
