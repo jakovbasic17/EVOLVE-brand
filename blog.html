@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EVOLVE Blog</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    h1 {
+      color: #5a5136;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: #111;
+      border: 1px solid #5a5136;
+      border-radius: 14px;
+      padding: 30px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h2 {
+      color: #5a5136;
+      margin-bottom: 15px;
+    }
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #5a5136;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .card a:hover {
+      background-color: #3e3927;
+    }
+  </style>
+</head>
+<body>
+  <h1>EVOLVE Blog</h1>
+  <div class="blog-grid">
+    <div class="card">
+      <h2>Krivo shvaćen progressive overload</h2>
+      <p>Jedan od najvažnijih principa u treningu često se pogrešno primjenjuje. Evo gdje većina griješi — i kako to ispraviti.</p>
+      <a href="progressive-overload.html">Pročitaj više</a>
+    </div>
+  </div>
+</body>
+</html>
