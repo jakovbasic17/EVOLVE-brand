@@ -9,7 +9,6 @@
     :root {
       --evolve-color: #5a5136;
     }
-
     body {
       margin: 0;
       padding: 0;
@@ -17,13 +16,11 @@
       color: #fff;
       font-family: 'Inter', sans-serif;
     }
-
     h1 {
       text-align: center;
       color: var(--evolve-color);
       margin-top: 40px;
     }
-
     iframe {
       border: none;
       width: 100%;
@@ -34,7 +31,22 @@
       border-radius: 12px;
       background: #1a1a1a;
     }
-
+    .cta {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .cta a {
+      background-color: var(--evolve-color);
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .cta a:hover {
+      background-color: #3e3927;
+    }
     footer {
       text-align: center;
       padding: 30px;
@@ -46,6 +58,10 @@
 <body>
   <h1>Prijava za coaching</h1>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeokJpmyDuJYPk1kqja57lA-yp8xPKrIdfQsBcDdqStzss3Sw/viewform?embedded=true" allowfullscreen>Učitavanje…</iframe>
+
+  <div class="cta">
+    <a href="https://calendly.com/evolve-coaching-hr" target="_blank">📅 Zakaži Zoom poziv</a>
+  </div>
 
   <footer>
     &copy; 2025 Jakov Bašić — EVOLVE Coaching
