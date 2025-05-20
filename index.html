@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EVOLVE Coaching</title>
   <style>
     :root {
@@ -11,167 +11,125 @@
     }
     body {
       margin: 0;
+      font-family: 'Inter', sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: 'Inter', sans-serif;
     }
-    header {
-      text-align: center;
-      padding: 40px 20px 10px;
-    }
-    nav ul {
-      list-style: none;
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #000;
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 0;
-      margin: 30px 0 0 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      z-index: 1000;
     }
-    nav ul li a {
-      text-decoration: none;
+    .logo {
+      height: 40px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+    .nav-links a {
       color: var(--evolve-color);
+      text-decoration: none;
       font-weight: bold;
       text-transform: uppercase;
     }
-    .logo {
-      height: 50px;
-      margin-bottom: 10px;
+    .nav-links a:hover {
+      color: #fff;
     }
-    h1, h2, h3 {
-      text-align: center;
-      color: var(--evolve-color);
+    .burger {
+      display: none;
+      cursor: pointer;
     }
-    section {
-      padding: 60px 20px;
-      text-align: center;
+    .burger img {
+      height: 26px;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .mobile-menu {
+      display: none;
+    }
+    .mobile-menu.open {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.95);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
       gap: 30px;
-      max-width: 1100px;
-      margin: 0 auto;
+      z-index: 999;
     }
-    .card {
-      background-color: #111;
-      border: 1px solid var(--evolve-color);
-      border-radius: 16px;
-      padding: 30px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-    .card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px rgba(90, 81, 54, 0.7);
-    }
-    .card.unavailable {
-      opacity: 0.3;
-    }
-    .cta a {
-      background-color: var(--evolve-color);
-      color: white;
-      padding: 14px 28px;
-      border-radius: 8px;
+    .mobile-menu a {
+      color: var(--evolve-color);
+      font-size: 1.4rem;
+      text-transform: uppercase;
       font-weight: bold;
       text-decoration: none;
     }
-    .cta a:hover {
-      background-color: #3e3927;
+    .mobile-menu a:hover {
+      color: #fff;
     }
-    footer {
-      background-color: #000;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .insta-icon {
-      height: 36px;
-      margin-top: 10px;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    .insta-icon:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 6px var(--evolve-color));
-    }
-    .footer-logo {
-      height: 28px;
-      margin-top: 20px;
-      opacity: 0.6;
-    }
-    .review-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .review {
-      background-color: #111;
-      border-left: 4px solid var(--evolve-color);
-      padding: 20px;
-      border-radius: 10px;
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .burger {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="EVOLVE Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="#ponuda">Ponuda</a></li>
-        <li><a href="#omeni">O meni</a></li>
-        <li><a href="#recenzije">Recenzije</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="prijava.html">Prijava</a></li>
-      </ul>
+
+<header>
+  <div class="navbar">
+    <img src="images/logo.png" alt="EVOLVE Logo" class="logo" />
+    <nav class="nav-links">
+      <a href="#ponuda">Ponuda</a>
+      <a href="#omeni">O meni</a>
+      <a href="#recenzije">Recenzije</a>
+      <a href="blog.html">Blog</a>
+      <a href="prijava.html">Prijava</a>
     </nav>
-  </header>
-
-  <section id="hero">
-    <h1>Start your evolution</h1>
-    <p>EVOLVE — the process that outlasts motivation.</p>
-  </section>
-
-  <section id="ponuda">
-    <h2>Ponuda</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Live coaching</h3>
-        <p>Potpuno individualizirani treninzi uživo (Gyms4You Nova Galerija Zagreb). Dostupna i opcija poluindividualnih treninga.</p>
-      </div>
-      <div class="card">
-        <h3>Hybrid coaching</h3>
-        <p>Jedan trening uživo + online plan. Svakodnevna podrška i tjedni check-in.</p>
-      </div>
-      <div class="card unavailable">
-        <h3>Online coaching</h3>
-        <p>Trenutno nedostupno. Dolazi uskoro.</p>
-      </div>
+    <div id="burger" class="burger">
+      <img src="images/burger.png" alt="Menu" />
     </div>
-  </section>
+  </div>
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#ponuda">Ponuda</a>
+    <a href="#omeni">O meni</a>
+    <a href="#recenzije">Recenzije</a>
+    <a href="blog.html">Blog</a>
+    <a href="prijava.html">Prijava</a>
+  </div>
+</header>
 
-  <section id="blog">
-    <h2>Blog</h2>
-    <p>Prvi tekst je online: <strong>Krivo shvaćen progressive overload</strong></p>
-    <div class="cta"><a href="blog.html">Otvori blog</a></div>
-  </section>
+<section id="hero" style="text-align:center; padding: 60px 20px;">
+  <h1 style="color:#5a5136;">Start your evolution</h1>
+  <p>EVOLVE — the process that outlasts motivation.</p>
+</section>
 
-  <section id="omeni">
-    <h2>O meni</h2>
-    <p>Moje ime je <strong>Jakov Bašić</strong>. Kroz sport sam prošao gotovo cijeli život — od plivanja i nogometa do street workouta i teretane. Danas pomažem drugima kroz individualiziran pristup, analizu pokreta i fokus na dugoročne rezultate.</p>
-  </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burger");
+  const menu = document.getElementById("mobile-menu");
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("open");
+    });
+  });
+});
+</script>
 
-  <section id="recenzije">
-    <h2>Recenzije</h2>
-    <div class="review-list" id="review-list"></div>
-  </section>
-
-  <footer>
-    <a href="https://instagram.com/jakov_basic" target="_blank" title="@jakov_basic">
-      <img src="images/instagram_icon_evolve_v2.png" alt="Instagram" class="insta-icon" />
-    </a>
-    <br>
-    <img src="images/logo.png" alt="EVOLVE Logo" class="footer-logo" />
-    <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
-  </footer>
-  <script src="recenzije.js"></script>
 </body>
 </html>
