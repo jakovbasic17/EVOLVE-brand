@@ -110,59 +110,6 @@
       border-radius: 10px;
     }
   </style>
-
-<style>
-  .burger {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 35px;
-    right: 20px;
-  }
-  .burger img {
-    height: 24px;
-  }
-  .mobile-menu {
-    display: none;
-  }
-  .mobile-menu.open {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.96);
-    backdrop-filter: blur(4px);
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    z-index: 999;
-  }
-  .mobile-menu a {
-    color: var(--evolve-main);
-    text-decoration: none;
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
-  .close-menu {
-    position: absolute;
-    top: 20px;
-    right: 24px;
-    font-size: 2rem;
-    color: #fff;
-    cursor: pointer;
-  }
-  @media (max-width: 768px) {
-    nav ul {
-      display: none;
-    }
-    .burger {
-      display: block;
-    }
-  }
-</style>
 </head>
 <body>
   <header>
@@ -176,18 +123,6 @@
         <li><a href="prijava.html">Prijava</a></li>
       </ul>
     </nav>
-<div class="burger" id="burger">
-  <img src="images/burger.png" alt="Meni" />
-</div>
-<div class="mobile-menu" id="mobile-menu">
-  <div class="close-menu" id="close-menu">&times;</div>
-  <a href="#ponuda">Ponuda</a>
-  <a href="#omeni">O meni</a>
-  <a href="#recenzije">Recenzije</a>
-  <a href="blog.html">Blog</a>
-  <a href="prijava.html">Prijava</a>
-</div>
-
   </header>
 
   <section id="hero">
@@ -238,31 +173,5 @@
     <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
   </footer>
   <script src="recenzije.js"></script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.getElementById("burger");
-    const menu = document.getElementById("mobile-menu");
-    const close = document.getElementById("close-menu");
-
-    burger.addEventListener("click", () => {
-      menu.classList.add("open");
-      document.body.style.overflow = 'hidden';
-    });
-
-    close.addEventListener("click", () => {
-      menu.classList.remove("open");
-      document.body.style.overflow = '';
-    });
-
-    menu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("open");
-        document.body.style.overflow = '';
-      });
-    });
-  });
-</script>
-
 </body>
 </html>
