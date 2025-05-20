@@ -1,12 +1,11 @@
 
 <!DOCTYPE html>
-
 <html lang="hr">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>EVOLVE Coaching</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVOLVE Coaching</title>
+  <style>
     :root {
       --evolve-color: #5a5136;
     }
@@ -111,169 +110,68 @@
       border-radius: 10px;
     }
   </style>
-
-<style>
-:root {
-  --evolve-color: #5a5136;
-}
-.navbar {
-  position: sticky;
-  top: 0;
-  background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 24px;
-  z-index: 1000;
-}
-.logo {
-  height: 40px;
-}
-.nav-links {
-  display: flex;
-  gap: 24px;
-}
-.nav-links a {
-  color: var(--evolve-color);
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.nav-links a:hover {
-  color: #fff;
-}
-.burger {
-  display: none;
-  cursor: pointer;
-}
-.burger img {
-  height: 26px;
-}
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(4px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  transform: translateY(-100%);
-  transition: transform 0.4s ease-in-out;
-  z-index: 999;
-}
-.mobile-menu a {
-  color: var(--evolve-color);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.mobile-menu a:hover {
-  color: #fff;
-}
-.mobile-menu.open {
-  transform: translateY(0);
-}
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
-}
-</style>
 </head>
 <body>
-<header>
-<div class="navbar">
-<img alt="EVOLVE Logo" class="logo" src="images/logo.png"/>
-<nav class="nav-links">
-<a href="#ponuda">Ponuda</a>
-<a href="#omeni">O meni</a>
-<a href="#recenzije">Recenzije</a>
-<a href="blog.html">Blog</a>
-<a href="prijava.html">Prijava</a>
-</nav>
-<div class="burger" id="burger">
-<img alt="Menu" src="images/burger.png"/>
-</div>
-</div>
-<div class="mobile-menu" id="mobile-menu">
-<a href="#ponuda">Ponuda</a>
-<a href="#omeni">O meni</a>
-<a href="#recenzije">Recenzije</a>
-<a href="blog.html">Blog</a>
-<a href="prijava.html">Prijava</a>
-</div>
-</header>
+  <header>
+    <img src="images/logo.png" alt="EVOLVE Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#ponuda">Ponuda</a></li>
+        <li><a href="#omeni">O meni</a></li>
+        <li><a href="#recenzije">Recenzije</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="prijava.html">Prijava</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
+  <section id="hero">
+    <h1>Start your evolution</h1>
+    <p>EVOLVE — the process that outlasts motivation.</p>
+  </section>
 
+  <section id="ponuda">
+    <h2>Ponuda</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Live coaching</h3>
+        <p>Potpuno individualizirani treninzi uživo (Gyms4You Nova Galerija Zagreb). Dostupna i opcija poluindividualnih treninga.</p>
+      </div>
+      <div class="card">
+        <h3>Hybrid coaching</h3>
+        <p>Jedan trening uživo + online plan. Svakodnevna podrška i tjedni check-in.</p>
+      </div>
+      <div class="card unavailable">
+        <h3>Online coaching</h3>
+        <p>Trenutno nedostupno. Dolazi uskoro.</p>
+      </div>
+    </div>
+  </section>
 
-</header>
-<section id="hero">
-<h1>Start your evolution</h1>
-<p>EVOLVE — the process that outlasts motivation.</p>
-</section>
-<section id="ponuda">
-<h2>Ponuda</h2>
-<div class="grid">
-<div class="card">
-<h3>Live coaching</h3>
-<p>Potpuno individualizirani treninzi uživo (Gyms4You Nova Galerija Zagreb). Dostupna i opcija poluindividualnih treninga.</p>
-</div>
-<div class="card">
-<h3>Hybrid coaching</h3>
-<p>Jedan trening uživo + online plan. Svakodnevna podrška i tjedni check-in.</p>
-</div>
-<div class="card unavailable">
-<h3>Online coaching</h3>
-<p>Trenutno nedostupno. Dolazi uskoro.</p>
-</div>
-</div>
-</section>
-<section id="blog">
-<h2>Blog</h2>
-<p>Prvi tekst je online: <strong>Krivo shvaćen progressive overload</strong></p>
-<div class="cta"><a href="blog.html">Otvori blog</a></div>
-</section>
-<section id="omeni">
-<h2>O meni</h2>
-<p>Moje ime je <strong>Jakov Bašić</strong>. Kroz sport sam prošao gotovo cijeli život — od plivanja i nogometa do street workouta i teretane. Danas pomažem drugima kroz individualiziran pristup, analizu pokreta i fokus na dugoročne rezultate.</p>
-</section>
-<section id="recenzije">
-<h2>Recenzije</h2>
-<div class="review-list" id="review-list"></div>
-</section>
-<footer>
-<a href="https://instagram.com/jakov_basic" target="_blank" title="@jakov_basic">
-<img alt="Instagram" class="insta-icon" src="images/instagram_icon_evolve_v2.png">
-</img></a>
-<br/>
-<img alt="EVOLVE Logo" class="footer-logo" src="images/logo.png"/>
-<p>© 2025 Jakov Bašić — EVOLVE Coaching</p>
-</footer>
-<script src="recenzije.js"></script>
+  <section id="blog">
+    <h2>Blog</h2>
+    <p>Prvi tekst je online: <strong>Krivo shvaćen progressive overload</strong></p>
+    <div class="cta"><a href="blog.html">Otvori blog</a></div>
+  </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("mobile-menu");
-  burger.addEventListener("click", () => {
-    menu.classList.toggle("open");
-  });
-  menu.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("open");
-    });
-  });
-});
-</script>
+  <section id="omeni">
+    <h2>O meni</h2>
+    <p>Moje ime je <strong>Jakov Bašić</strong>. Kroz sport sam prošao gotovo cijeli život — od plivanja i nogometa do street workouta i teretane. Danas pomažem drugima kroz individualiziran pristup, analizu pokreta i fokus na dugoročne rezultate.</p>
+  </section>
+
+  <section id="recenzije">
+    <h2>Recenzije</h2>
+    <div class="review-list" id="review-list"></div>
+  </section>
+
+  <footer>
+    <a href="https://instagram.com/jakov_basic" target="_blank" title="@jakov_basic">
+      <img src="images/instagram_icon_evolve_v2.png" alt="Instagram" class="insta-icon" />
+    </a>
+    <br>
+    <img src="images/logo.png" alt="EVOLVE Logo" class="footer-logo" />
+    <p>&copy; 2025 Jakov Bašić — EVOLVE Coaching</p>
+  </footer>
+  <script src="recenzije.js"></script>
 </body>
 </html>
