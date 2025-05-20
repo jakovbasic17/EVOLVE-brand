@@ -111,30 +111,107 @@
       border-radius: 10px;
     }
   </style>
+
+<style>
+:root {
+  --evolve-color: #5a5136;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  z-index: 1000;
+}
+.logo {
+  height: 40px;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+.nav-links a {
+  color: var(--evolve-color);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.nav-links a:hover {
+  color: #fff;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger img {
+  height: 26px;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 999;
+}
+.mobile-menu a {
+  color: var(--evolve-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.mobile-menu a:hover {
+  color: #fff;
+}
+.mobile-menu.open {
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}
+</style>
 </head>
 <body>
 <header>
-<div style="position: sticky; top: 0; background: #000; z-index: 999; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
-<img alt="EVOLVE Logo" class="logo" src="images/logo.png" style="height: 40px;"/>
-<nav class="desktop-nav" style="display: flex; gap: 20px;">
+<div class="navbar">
+<img alt="EVOLVE Logo" class="logo" src="images/logo.png"/>
+<nav class="nav-links">
 <a href="#ponuda">Ponuda</a>
 <a href="#omeni">O meni</a>
 <a href="#recenzije">Recenzije</a>
 <a href="blog.html">Blog</a>
 <a href="prijava.html">Prijava</a>
 </nav>
-<button id="burger" style="background: none; border: none; display: none; cursor: pointer;">
-<img alt="Menu" src="images/burger.png" style="height: 26px;"/>
-</button>
+<div class="burger" id="burger">
+<img alt="Menu" src="images/burger.png"/>
 </div>
-</header>
-<div id="mobile-menu" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #000; flex-direction: column; justify-content: center; align-items: center; gap: 30px; z-index: 998;">
+</div>
+<div class="mobile-menu" id="mobile-menu">
 <a href="#ponuda">Ponuda</a>
 <a href="#omeni">O meni</a>
 <a href="#recenzije">Recenzije</a>
 <a href="blog.html">Blog</a>
 <a href="prijava.html">Prijava</a>
 </div>
+</header>
 
 <header>
 
@@ -185,9 +262,17 @@
 <script src="recenzije.js"></script>
 
 <script>
-document.getElementById("burger").addEventListener("click", function () {
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.getElementById("burger");
   const menu = document.getElementById("mobile-menu");
-  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  burger.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("open");
+    });
+  });
 });
 </script>
 </body>
