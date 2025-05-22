@@ -39,3 +39,28 @@ h1, h2, h3, h4, h5 {
 a:hover {
   color: var(--evolve-main);
 }
+
+@media (max-width: 768px) {
+  .mobile-prijava {
+    display: block;
+    width: fit-content;
+    margin: 24px auto 0;
+    padding: 12px 24px;
+    background-color: var(--evolve-main);
+    color: var(--evolve-text-light);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(90, 81, 54, 0.4);
+    transition: transform 0.2s ease;
+  }
+
+  .mobile-prijava:hover {
+    transform: scale(1.05);
+  }
+
+  nav {
+    display: none !important;
+  }
+}
