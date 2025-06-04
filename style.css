@@ -64,3 +64,23 @@ a:hover {
     display: none !important;
   }
 }
+
+
+.review-images {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.review-images img {
+  max-width: 100%;
+  width: 400px;
+  border: 3px solid #5a5136;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(90, 81, 54, 0.4);
+  transition: transform 0.3s ease;
+}
+.review-images img:hover {
+  transform: scale(1.02);
+}
